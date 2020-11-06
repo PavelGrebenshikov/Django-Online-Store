@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<section>
+  <div class="container__store-about">
+      
+    <h1 class="welcome__user">Мы рады видеть вас в нашем интернет-магазине!</h1>
+    <div class="information__about-us">
+      Владельцем данного сайта является компания "Двоечка"
+      Эта компания была создана в марте 2020 года. Его владелец-Роман Иванович. 
+      Компания занимается продажей различных запчастей для автомобилей,
+      мотоциклов и лодок, а также продажей различных болтов, шайб и так далее.
+    </div>
+
+    <div class="flex__people-authority">
+      {% for about in About %}
+        <div class="director__information">
+          {{ about.discription }}
+        </div>
+        <div class="people__auhority">
+          <div class="about__authority">
+            <h3>{{ about.name }}</h3>
+            <h2>{{ about.position }}</h2>
+          </div>
+          <a href="#">
+            <img src="/../../../static{{ about.images.url }}" alt="" />
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

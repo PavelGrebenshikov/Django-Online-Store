@@ -1,0 +1,26 @@
+/* Creating animation CSS for online-store. RomanDetails */
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    overflow: visible;
+    background-color: rgba(2, 2, 2, 0.7);
+  }
+}
+
+/* show price in details.html */
+
+@keyframes hidden {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    margin: -22px 0px 0px 0px;
+    opacity: 1;
+  }
+}

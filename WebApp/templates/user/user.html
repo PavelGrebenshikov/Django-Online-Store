@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+<!-- main  -->
+<section class="main">
+  <div class="text__align-center">
+    <span>Personal account</span>
+  </div>
+  <div class="profile__user-personal">
+    <div class="help__form">
+      <ul class="list">
+        <li>Ваш логин: <span class="line_profile">{{ user.id }}</span></li>
+        <li>Ваше имя: <span class="line_profile">{{ user.username }}</span></li>
+        <li>Ваша Фамилия: <span class="line_profile">{{ user.last_name }}</span></li>
+        <li>
+          Электронная почта:<span class="line_profile">{{ user.email }}</span>
+        </li>
+        <li>Ваш номер телефон: <span class="line_profile">{{ user.phone }}</span></li>
+      </ul>
+    </div>
+    <div class="photo_user">
+      <img src="../../static/media/images/photo-69145.jpg" alt="Avatar_profile" srcset="" />
+    </div>
+    <div class="right_info">
+      <ul class="list">
+        <li>Сообщение</li>
+        <li>Форум</li>
+        <li>Незвестно</li>
+        <li><a href="{% url 'edit' %}">Редактирование профиля</a></li>
+        <li><a href="{% url 'logout' %}">Выход из профиля</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<!-- main  -->
+<section class="main">
+  <div class="text__align-center">
+    <span>Вход в личный кабинет</span>
+  </div>
+  <form method="POST">
+    <div class="help__form">
+      <ul class="list">
+        <li>1. Введите свой логин и пароль</li>
+        <li>2. Нажмите на кнопку для входа</li>
+        <li>3. Неговорите никому свой пароль</li>
+        <li>4. Администрация не будет спрашивать ваш пароль.</li>
+      </ul>
+    </div>
+    <div class="wrapper__form">
+        {% csrf_token %} {{ form.as_table }}
+      <input id="btn-submit" name="btn" type="submit" value="Вход" /><br />
+      <input type="hidden" value="{{ next }}">
+      <label>Если вы незарегистрировались, то нажмите сюда:
+        <a href="{% url 'register' %}">Регистрация</a></label>
+    </div>
+    <div class="links__site"></div>
+  </form>
+</section>
+{% endblock content %}

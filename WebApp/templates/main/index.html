@@ -1,0 +1,122 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<section>
+  <div class="container__store">
+    {% for EditsHeadText in EditHeadText %}
+    <div class="about__online-store">
+      <h2>{{ EditsHeadText.WelcomeText }}</h2>
+      <h3>{{ EditsHeadText.EditHeadText }}</h3>
+    </div>
+    <div class="icons__details-nut">
+      <img src="../../static{{ EditsHeadText.EditCenterImage.url }}" />
+    </div>
+    {% endfor %}
+    <div class="wrapper__block-information">
+      {% for Edit in EditText %}
+      <div class="block__information">
+        <div class="text__information">
+          <span>{{ Edit.EditHeadText }}</span>
+        </div>
+        <div class="description__information">
+          <span> {{ Edit.EditDisText }} </span>
+        </div>
+        <div class="details__car">
+          <img src="../../static{{Edit.EditImages.url }}" alt="Детали" />
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Section categories in online store -->
+<section class="flex__container">
+  <div class="container">
+    <div class="category__section">
+      <div class="section-list">
+        <span class="list__category">Категории</span>
+      </div>
+      <div class="category">
+           {% for category in Category %}
+        <div class="category_products">
+          <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="flex__wrapper">
+      {% for Product in Products %}
+      <div class="pictures__flex-blocks">
+        <div class="text__about-item">
+          <h1>{{ Product.name_product }}</h1>
+          <h2>{{ Product.discription }}</h2>
+          <h3>{{ Product.price }} руб</h3>
+          <a class="link__items" href="{{ Product.get_absolute_url }}">Подробнее</a>
+        </div>
+        <img class="active" src="/../../../static{{Product.images.url }}" alt="" />
+      </div>
+      
+      {% endfor %}
+    </div>
+    <div class="pagination">
+      {% if page_obj.has_previous %}
+      <a class="Previous" href="?page={{ page_object.previous_page_number }}">Назад</a>
+      {% endif %}
+      <span class="page_number">Страница:{{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}
+      <a class="Next" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- Section main content -->
+<section class="scroll__pointer">
+  <div class="heders__products-menu">
+    <div class="name__menu-header">
+      <span> Вид различных деталий </span>
+    </div>
+    <div class="list__menu-products">
+      <div class="list__products-wrapper">
+        <span><a href="#">Новые</a></span>
+        <span><a href="#">Скидки</a></span>
+        <span><a href="#">Популярные</a></span>
+        <span><a href="#">Старые детали</a></span>
+        <span> <a href="#">Расходные материалы</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="container__slider">
+    <div id="cbp-fwslider" class="cbp-fwslider">
+      <ul>
+        {% for sl in Sliders %}
+        <li><img src="../../static{{sl.SliderImages.url }}" /></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Section line -->
+<section class="line__section">
+  <div class="line__gold"></div>
+</section>
+<!-- Section lower main content -->
+<section class="scroll__pointer2">
+  <div class="container__last-lower">
+    <div class="section__lower-content">
+      <div class="header__text-content">
+        <span>Различные детали</span>
+      </div>
+      <div class="flex__pictures-colum">
+        {% for Various in VariousDetails %}
+        <div class="pictures__product-lower">
+          <img
+            src="../../static{{ Various.VariousImage.url }}"
+            alt="Various Products"
+          />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

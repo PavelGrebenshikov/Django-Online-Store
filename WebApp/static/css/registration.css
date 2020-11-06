@@ -1,0 +1,144 @@
+/* main */
+
+.main {
+  background-color: #222;
+  min-width: 100%;
+  height: 612px;
+}
+
+/* Text */
+
+.text__align-center {
+  margin: 0;
+  padding: 50px 0px 0px 0px;
+  text-align: center;
+  letter-spacing: 15px;
+  font-size: 24px;
+  color: #fff;
+  height: 100px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Forma */
+
+.help__form {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  width: 410px;
+  height: 300px;
+  color: #fff;
+}
+.right_info {
+  text-align: center;
+  margin-left: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  width: 410px;
+  height: 300px;
+  color: #fff;
+}
+.photo_user {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  width: 410px;
+  height: 300px;
+  color: #fff;
+}
+.photo_user > img {
+  margin-top: 45px;
+  width: 410px;
+  height: 310px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.list > li {
+  margin-top: 46px;
+  font-size: 18px;
+}
+.links__site {
+  width: 410px;
+  height: 300px;
+}
+
+/* Edit for one line later */
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 512px;
+  background: #222;
+}
+.invalid__password-user {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 512px;
+  background: #222;
+}
+.profile__user-personal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 512px;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  color: goldenrod;
+}
+.wrapper__form {
+  position: relative;
+  top: 50px;
+  width: 340px;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+}
+.wrapper__form > input {
+  border-radius: 10px;
+  height: 30px;
+  width: 300px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.wrapper__form > span {
+  text-align: center;
+  color: #fff;
+  margin: 20px;
+}
+/* Btn submit */
+
+#btn-submit {
+  transition: 0.3s;
+  background: goldenrod;
+  outline: none;
+  border: solid goldenrod 2px;
+}
+#btn-submit:hover {
+  transition: 0.3s;
+  background: #222;
+  color: #fff;
+  border: solid aqua 2px;
+}
+
+/* Account */
+
+label > a {
+  color: #fff;
+}
+label > a:hover {
+  color: goldenrod;
+}
+
+/* Page details.html style block */
+
+/*  */ /*  */ /*  */
+/*  */ /*  */
+/**/ /*  */
+/*  */
+
+/* profile user */
+
+.line_profile {
+  font-size: 22px;
+  text-decoration: underline aqua;
+}

@@ -1,0 +1,744 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 1100px;
+}
+header {
+  width: 100%;
+  height: 78px;
+  background-color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* header top */
+/* logo  */
+.header-top {
+  height: 48px;
+}
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin: 15px 0px 0px 80px;
+}
+.text-logo {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  font-size: 18px;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* Icons menu */
+.header__menu-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__icons {
+  margin: -17px 143px 0px 0px;
+}
+.links-icons {
+  word-spacing: 0px;
+}
+.links-icons > a {
+  outline: none;
+  padding: 14px 20px 14px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #fff;
+}
+.links-icons > a:hover {
+  color: goldenrod;
+}
+/* header-lower */
+/* header-lower logo x2 */
+.header__lower {
+  width: 100%;
+  height: 30px;
+  background-color: goldenrod;
+}
+.header__bg {
+  display: flex;
+  justify-content: flex-end;
+}
+.header__navigation-menu {
+  margin: 5px 122px 0px 0px;
+}
+.header__navigation-menu > span > a {
+  padding: 5px 20px 9px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.header__navigation-menu > span :last-child {
+  word-spacing: 0px;
+}
+.header__navigation-menu > span > a {
+  cursor: pointer;
+}
+.header__navigation-menu > span > a:hover {
+  background: #222;
+  transition: 0.3s;
+}
+.text__header-lower {
+  position: relative;
+  right: 495px;
+  top: 5px;
+}
+.text__header-lower > span {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* Information about store */
+.container__store {
+  width: 100%;
+  height: 850px;
+}
+.about__online-store {
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  text-align: center;
+}
+.about__online-store > h2,
+h3 {
+  padding-top: 10px;
+  color: #222;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.wrapper__block-information {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+}
+.block__information {
+  margin: 50px 20px 0px 20px;
+  width: 400px;
+  height: 450px;
+}
+.text__information {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+  color: #222;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.description__information {
+  width: 75%;
+  margin: 20px 0px 20px 47px;
+  text-align: center;
+  color: #222;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.details__car {
+  margin: 50px 0px 20px 85px;
+  width: 75%;
+  height: 350px;
+}
+.details__car > img {
+  width: 75%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icons__details-nut {
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+}
+/* Category section */
+.flex__container {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+.container {
+  width: 25%;
+  height: 850px;
+}
+.category__section {
+  width: 320px;
+  height: 819px;
+}
+.section-list {
+  text-align: center;
+  padding-top: 40px;
+}
+.section-list > span {
+  width: 100%;
+}
+.list__category {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  color: #222;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Text animation ovarflow visible */
+
+.info__details,
+.price__details-active {
+  opacity: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ActiveRecord */
+.text__about-item {
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  width: 0;
+  height: 0;
+  text-align: center;
+  position: relative;
+  top: 150px;
+}
+.text__about-item > h1 {
+  font-size: 24px;
+  padding-bottom: 5px;
+  width: 250px;
+  cursor: pointer;
+  color: goldenrod;
+  position: relative;
+  top: -100px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+.text__about-item > h2 {
+  font-size: 16px;
+  cursor: pointer;
+  color: goldenrod;
+  position: relative;
+  top: -50px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  width: 250px;
+  padding-bottom: 5px;
+}
+.text__about-item > h3 {
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  color: goldenrod;
+  width: 250px;
+  position: relative;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  padding-bottom: 5px;
+}
+.text__about-item > a {
+  padding-top: 15px;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: 25px;
+  width: 200px;
+  height: 50px;
+  background-color: goldenrod;
+  text-decoration: none;
+}
+.activeRecord {
+  transition-duration: 0.2s;
+  background-color: rgb(43, 49, 54);
+  margin-top: 0px;
+  z-index: 1;
+}
+.text__about-item > a.link__items:hover {
+  color: black;
+  transition: 0.5s;
+  border: 1px solid aqua;
+}
+
+/* Hover .text__about-item > h1 */
+/* .text__about-item > h1:hover {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+.text__about-item > h2:hover {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.text__about-item > h3:hover {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+/* Block pictures */
+
+.wrapper {
+  width: 1000px;
+  height: 818px;
+}
+.flex__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.flex__wrapper > .pictures__flex-blocks {
+  margin-top: 40px;
+}
+.pictures__flex-blocks {
+  width: 254px;
+  height: 354px;
+  border: 2px solid grey;
+}
+.pictures__flex-blocks > img {
+  width: 250px;
+  height: 350px;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  margin-top: 0px;
+}
+.pictures__flex-blocks > .new__product {
+  width: 50px;
+  height: 40px;
+}
+.new__product {
+  position: relative;
+  top: -348px;
+  left: 2px;
+}
+
+/* Main content section */
+
+/* menu header in main content */
+.heders__products-menu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 48px;
+  background: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.name__menu-header,
+.list__menu-products {
+  margin: 15px 0px 0px 25px;
+}
+.list__products-wrapper > span > a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16;
+  padding: 14px 20px 17px 20px;
+}
+.list__products-wrapper > span {
+  cursor: pointer;
+  margin: 0px 0px 0px 12px;
+}
+.list__products-wrapper > span > a:hover {
+  background: goldenrod;
+  transition: 0.3s;
+}
+.name__menu-header > span {
+  cursor: pointer;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16;
+}
+.container__slider {
+  margin: 25px 0px 0px 0px;
+}
+/* line section */
+
+.line__section {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  opacity: 0;
+}
+/* .line__gold {
+  position: relative;
+  top: 140px;
+  width: 100%;
+  height: 30px;
+  background: goldenrod;
+} */
+
+/* Section lower main content */
+.container__last-lower {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  height: 860px;
+  background: #222;
+}
+.section__lower-content {
+  height: 600px;
+}
+.header__text-content {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.header__text-content > span {
+  border-bottom: 3px goldenrod solid;
+}
+.flex__pictures-colum {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pictures__product-lower {
+  margin: 70px 50px 0px 50px;
+}
+.pictures__product-lower > img {
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+}
+
+/* Footer online-store */
+
+footer {
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  border-top: 3px goldenrod solid;
+  background: #222;
+}
+.text__footer-center {
+  position: relative;
+  top: 25px;
+  left: 0;
+  height: 68px;
+  text-align: center;
+}
+.text__footer-center > span {
+  color: #fff;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.flex__column {
+  display: flex;
+  justify-content: space-around;
+}
+.list__text-footer {
+  margin: 30px 0px 0px 0px;
+}
+.list__footer {
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+}
+.list__footer > li {
+  padding: 15px 0px 0px 0px;
+}
+.list__footer > li > a:hover {
+  color: goldenrod;
+}
+
+/* Icons FontAwesome */
+.icons__details-nut > img {
+  width: 300px;
+  height: 100xp;
+}
+
+/* Page details.html style block */
+
+/*  */ /*  */ /*  */
+/*  */ /*  */
+/**/ /*  */
+/*  */
+.container__store-details {
+  width: 100%;
+  height: 1350px;
+  margin: 20px 0px 0px 0px;
+}
+.details__products-all {
+  display: flex;
+  justify-content: center;
+}
+.block__details-products {
+  width: 300px;
+  height: 300px;
+  background: #222;
+  margin: 20px 0px 0px 12px;
+}
+.block__details-products > a > img {
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.price__details {
+  background: #222;
+  position: relative;
+  top: -300px;
+  text-align: center;
+  color: goldenrod;
+  font-size: 24px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  opacity: 0;
+}
+.block__details-products:hover .price__details {
+  transition: 0.3;
+  animation: hidden 1s;
+  animation-fill-mode: forwards;
+}
+
+/*  */ /*  */ /*  */
+/*  */ /*  */
+/**/ /*  */
+/*  */
+
+/* End page details.html  */
+
+/* Begin page about.html */
+
+.container__store-about {
+  width: 100%;
+  height: 1800px;
+  /* margin: 20px 0px 0px 0px; */
+}
+.welcome__user {
+  margin: 120px 0px 0px 0px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 26px;
+  color: #222;
+}
+.creating__company-site {
+  margin: 20px 0px 0px 0px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  color: #222;
+}
+.information__about-us {
+  margin: 150px 0px 0px 0px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  color: #222;
+  width: 800px;
+  position: relative;
+  top: 0;
+  left: 230px;
+}
+.flex__people-authority {
+  position: absolute;
+  top: 370px;
+  left: 350px;
+}
+.people__auhority {
+  width: 300px;
+  height: 300px;
+  margin: 50px 0px 0px 20px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+.people__auhority > a > img {
+  margin-top: 5px;
+  right: 200px;
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about__authority {
+  width: 500px;
+  margin: 120px 0px 0px 0px;
+}
+.about__authority > h3,
+h2 {
+  margin: 10px 0px 10px 0px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  color: #222;
+}
+.about__authority > h3 {
+  font-size: 24px;
+}
+.director__information,
+.hr__infromation {
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  position: relative;
+  top: 320px;
+  left: 400px;
+  color: #222;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+}
+.co__founder-information {
+  width: 300px;
+  position: relative;
+  top: 380px;
+  right: 330px;
+  color: #222;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+/* End page about.html */
+
+/* LIST ITEMS new ACCORDION */
+
+.listItems {
+  padding-top: 150px;
+  width: 310px;
+  height: 310px;
+  text-align: center;
+  font-size: 24px;
+  color: #222222;
+}
+.listItems > li {
+  line-height: 60px;
+}
+.listItems > li > a {
+  color: #222222;
+}
+.listItems > li > a:hover {
+  color: goldenrod;
+}
+
+/* Pagination of Product */
+.pagination {
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 20px;
+  text-align: center;
+}
+.Previous,
+.Next,
+.page_number {
+  padding: 5px 5px 5px 5px;
+  color: #222;
+  border: 1px solid #222;
+}
+
+/* Category in django */
+
+.category_products {
+  margin-left: 10px;
+  padding-top: 10px;
+  margin-top: 25px;
+  width: 300px;
+  height: 50px;
+  border: 2px solid goldenrod;
+  background-color: #222;
+  text-align: center;
+}
+
+.category_products > a {
+  font-size: 24px;
+}
+
+.category_products:hover {
+  transition: 0.5s;
+  border: 2px solid aqua;
+}
+
+/* logout profile */
+
+.logout {
+  width: 100%;
+  height: 515px;
+  background-color: #222;
+}
+
+.logout > h1 {
+  padding-top: 200px;
+  color: goldenrod;
+  font-size: 36px;
+  text-align: center;
+}
+
+.logout > h2 > a {
+  color: goldenrod;
+}
+
+.logout > h2 > a:hover {
+  color: royalblue;
+  transition: 3s;
+}
+
+.logout > h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Profile detail in online store */
+
+.main {
+  width: 100%;
+  height: 500px;
+}
+.details {
+  width: 450px;
+}
+.pictures_details {
+  width: 450px;
+  height: 300px;
+  margin-top: 30px;
+}
+
+.name_detail {
+  color: white;
+  font-family: serif;
+  font-size: 28px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.discription_detail {
+  color: white;
+  font-family: serif;
+  font-size: 24px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+.price {
+  color: white;
+  font-family: serif;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Added item product in basket  */
+
+.add_in_basket {
+  width: 300px;
+  height: 50px;
+  background-color: goldenrod;
+  position: relative;
+  top: -449px;
+  left: 500px;
+  border: 1px solid #222222;
+}
+.add_in_basket:hover {
+  transition: 0.5s;
+  border: 2px solid aqua;
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+    <section class="main">
+        <div class="text__align-center">
+            <span>Редактирование профиля</span>
+        </div>
+        <form method="POST">
+          <div class="help__form">
+            <ul class="list">
+              <li>1. Изменение имени</li>
+              <li>2. Изменение фамилии</li>
+              <li>3. Изменении фотографии</li>
+              <li>4. Изменение эл.почты</li>
+              <li>5. Изменение номера телефона</li>
+            </ul>
+          </div>
+            <div class="wrapper__form">
+                {% csrf_token %}
+                {{ form.as_table }}
+              <input id="btn-submit" name="btn" type="submit" value="Изменить">
+                <input type="hidden" value="{{ next }}">
+            </div>
+          <div class="links__site"></div>
+        </form>
+    </section>
+{% endblock content  %}
