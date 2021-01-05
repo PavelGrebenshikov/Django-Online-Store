@@ -46,3 +46,9 @@ admin.site.register(Slider, SliderAdmin)
 admin.site.register(Edit, EditAdmin)
 admin.site.register(EditCenterText, EditCenterTextAdmin)
 admin.site.register(VariousDetails, VariousDetailsAdmin)
+
+
+# it admin title and header
+
+admin.site.site_title = 'Управление Онлайн-Магазином'
+admin.site.site_header = 'Управлениe Онлайн-Магазином'
