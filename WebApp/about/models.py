@@ -4,11 +4,11 @@ from django.db import models
 
 
 class AboutCompany(models.Model):
-    name = models.CharField('Имя сотрудника', max_length=128, blank=True)
+    name = models.CharField('Имя сотрудника', max_length=128, blank=False)
     position = models.CharField(
-        'Должность сотрудника', max_length=128, blank=True)
+        'Должность сотрудника', max_length=128, blank=False)
     discription = models.CharField(
-        'Описание сотрудника', max_length=128, blank=True)
+        'Описание сотрудника', max_length=128, blank=False)
     images = models.ImageField('Фотография сотрудника', upload_to='images/')
 
     def __str__(self):
