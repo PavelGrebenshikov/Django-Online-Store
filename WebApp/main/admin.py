@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 from .models import Product, Slider, Edit, EditCenterText, VariousDetails, Category
 
 
@@ -11,9 +12,17 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name_product', 'discription', 'price', 'images', 'category', 'create_at', 'update_at']
+    list_display = ['id', 'name_product', 'discription', 'price', 'category', 'create_at', 'update_at']
     list_display_links = ['id', 'name_product']
     search_fields = ['id', 'name_product', 'discription']
+    fields = ('name_product', 'discription', 'price', 'category', 'images', 'get_images')
+    readonly_fields = ['create_at', 'update_at', 'get_images']
+
+    def get_images(self, obj):
+        if obj.images:
+            return mark_safe(f'<img src="{obj.images.url}" width="75px">')
+        else:
+            return 'Фото не установлено'
 
 
 class SliderAdmin(admin.ModelAdmin):

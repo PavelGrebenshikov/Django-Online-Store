@@ -26,7 +26,7 @@ class Product(models.Model):
     name_product = models.TextField('Название продукта', max_length=128)
     discription = models.TextField('Описание')
     price = models.IntegerField('Цена')
-    images = models.ImageField('Картинка', upload_to='images/')
+    images = models.ImageField('Картинка', upload_to='images/%Y/%m/%d')
     ToPut = models.BooleanField(default=True, verbose_name='Выставить на продажу')
     create_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
     update_at = models.DateTimeField(auto_now=True, verbose_name='дата обновления')
