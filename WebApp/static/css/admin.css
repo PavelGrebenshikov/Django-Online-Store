@@ -1,0 +1,30 @@
+#header {
+    background: goldenrod;
+    color: #222;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: #222;
+}
+
+a:link, a:visited {
+    color: #222;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: goldenrod;
+    color: #222;
+}
+
+div.breadcrumbs {
+    background: goldenrod;
+    color: #222;
+}
+
+.toggle-nav-sidebar {
+    color: #222;
+}
+
+h1 {
+    color: #222;
+}
