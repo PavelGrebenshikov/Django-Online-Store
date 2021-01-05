@@ -4,7 +4,7 @@ from django.urls import reverse
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=128, blank=True)
+    title = models.CharField(max_length=128, blank=False)
     slug = models.SlugField(max_length=128, unique=True,
                             blank=True, default=None)
 
@@ -17,16 +17,19 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
+        ordering = ['-title']
 
 
 class Product(models.Model):
     category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, default=None)
+        Category, on_delete=models.CASCADE, default=None, verbose_name='Категория')
     name_product = models.TextField('Название продукта', max_length=128)
     discription = models.TextField('Описание')
     price = models.IntegerField('Цена')
     images = models.ImageField('Картинка', upload_to='images/')
-    create_at = models.DateTimeField(auto_created=True)
+    ToPut = models.BooleanField(default=True, verbose_name='Выставить на продажу')
+    create_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
+    update_at = models.DateTimeField(auto_now=True, verbose_name='дата обновления')
 
     def get_absolute_url(self):
         return reverse('profile_detail', kwargs={'pk': self.pk})
@@ -38,7 +41,7 @@ class Product(models.Model):
         db_table = 'product'
         verbose_name = 'Продукция'
         verbose_name_plural = 'Продукция'
-        ordering = ['-create_at']
+        ordering = ['-id']
 
 
 class Slider(models.Model):
@@ -56,6 +59,7 @@ class Edit(models.Model):
     EditDisText = models.TextField('Об запчастях')
     EditImages = models.ImageField(
         'Изображение для разных видом транспорта', upload_to='images/')
+    UpdateTime = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
 
     def __str__(self):
         return self.EditHeadText
@@ -72,6 +76,7 @@ class EditCenterText(models.Model):
         'Центральный текст', max_length=128)
     EditCenterImage = models.ImageField(
         'Главная центральная картинки', upload_to='images/')
+    UpdateTimeCenterText = models.DateTimeField(auto_now=True, verbose_name='Дата обновления текста')
 
     def __str__(self):
         return self.WelcomeText

@@ -11,7 +11,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name_product', 'discription', 'price', 'images', 'category']
+    list_display = ['id', 'name_product', 'discription', 'price', 'images', 'category', 'create_at', 'update_at']
     list_display_links = ['id', 'name_product']
     search_fields = ['id', 'name_product', 'discription']
 
@@ -38,6 +38,7 @@ class VariousDetailsAdmin(admin.ModelAdmin):
     list_display = ['id', 'VariousImage']
     list_display_links = ['id', 'VariousImage']
     search_fields = ['id', 'VariousImage']
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
