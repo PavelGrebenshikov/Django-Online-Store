@@ -21,6 +21,9 @@ class IndexView(ListView):
         })
         return context
 
+    def get_queryset(self):
+        return Product.objects.filter(ToPut=True)
+
 
 class ProductDetailView(ListView):
     model = Product
