@@ -72,11 +72,18 @@
     right: 415px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1529px) {
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .text__header-lower {
     right: 485px;
   }
 }
+
+@media only screen and (min-width: 1300px) and (max-width: 1530px) {
+  .text__header-lower {
+    right: 625px;
+  }
+}
+
 @media only screen and (min-width: 1530px) and (max-width: 1919px) {
   .text__header-lower {
     right: 755px;
