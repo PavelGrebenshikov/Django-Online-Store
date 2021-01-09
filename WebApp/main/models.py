@@ -26,7 +26,7 @@ class Product(models.Model):
     name_product = models.TextField('Название продукта', max_length=128)
     discription = models.TextField('Описание')
     price = models.IntegerField('Цена')
-    images = models.ImageField('Картинка', upload_to='images/%Y/%m/%d')
+    images = models.ImageField('Картинка', upload_to='images/Product/%Y/%m/%d')
     ToPut = models.BooleanField(default=True, verbose_name='Выставить на продажу')
     create_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
     update_at = models.DateTimeField(auto_now=True, verbose_name='дата обновления')
@@ -46,7 +46,7 @@ class Product(models.Model):
 
 class Slider(models.Model):
     SliderImages = models.ImageField(
-        'Изображение слайдера', upload_to='images/')
+        'Изображение слайдера', upload_to='images/slider/%Y/%m/%d')
 
     class Meta:
         db_table = 'slider'
@@ -55,10 +55,10 @@ class Slider(models.Model):
 
 
 class Edit(models.Model):
-    EditHeadText = models.TextField('Заголовок запчастей', max_length=128)
-    EditDisText = models.TextField('Об запчастях')
+    EditHeadText = models.TextField('Категории запчастей', max_length=128)
+    EditDisText = models.TextField('Небольшой текст о запчастях')
     EditImages = models.ImageField(
-        'Изображение для разных видом транспорта', upload_to='images/')
+        'Изображение для разных видов транспорта', upload_to='images/')
     UpdateTime = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
 
     def __str__(self):
@@ -75,7 +75,7 @@ class EditCenterText(models.Model):
     EditHeadText = models.TextField(
         'Центральный текст', max_length=128)
     EditCenterImage = models.ImageField(
-        'Главная центральная картинки', upload_to='images/')
+        'Главная центральная картинки', upload_to='images/ctrText/%Y/%m/%d')
     UpdateTimeCenterText = models.DateTimeField(auto_now=True, verbose_name='Дата обновления текста')
 
     def __str__(self):
@@ -88,7 +88,7 @@ class EditCenterText(models.Model):
 
 
 class VariousDetails(models.Model):
-    VariousImage = models.ImageField('Различные детали', upload_to='images/')
+    VariousImage = models.ImageField('Различные детали', upload_to='images/Various/%Y/%m/%d')
 
     class Meta:
         db_table = 'various'
