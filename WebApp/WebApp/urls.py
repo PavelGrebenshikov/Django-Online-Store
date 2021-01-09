@@ -18,7 +18,7 @@ urlpatterns = [
     path('', include('about.urls')),
     path('', include('register.urls')),
     path('', include('user.urls')),
-    path('', include('editprofile.urls')),
+    #path('', include('editprofile.urls')),
     path('', include('login.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('__debug__/', include(debug_toolbar.urls)),

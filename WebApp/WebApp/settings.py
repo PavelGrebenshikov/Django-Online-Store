@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'about',
     'register',
     'user',
-    'editprofile',
     'phone_field',
     'debug_toolbar',
 ]
@@ -140,3 +139,5 @@ MEDIA_URL = '/media/'
 
 
 INTERNAL_IPS = ['127.0.0.1']
+
+AUTH_PROFILE_MODULE = 'WebApp.Profile'
