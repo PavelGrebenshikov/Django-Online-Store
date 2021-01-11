@@ -22,6 +22,7 @@ def edit_profile_user(request):
         form = ProfileUserForm(data=request.POST, instance=request.user)
         if form.is_valid():
             form.save()
+            return HttpResponseRedirect('/accounts/profile/')
     else:
         form = ProfileUserForm()
     return render(request, 'user/edit_add_profile.html', context={"form": form})
