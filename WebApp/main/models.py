@@ -25,7 +25,7 @@ class Product(models.Model):
         Category, on_delete=models.CASCADE, default=None, verbose_name='Категория')
     name_product = models.TextField('Название продукта', max_length=128)
     discription = models.TextField('Описание')
-    price = models.IntegerField('Цена')
+    price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена')
     images = models.ImageField('Картинка', upload_to='images/Product/%Y/%m/%d')
     ToPut = models.BooleanField(default=True, verbose_name='Выставить на продажу')
     create_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
