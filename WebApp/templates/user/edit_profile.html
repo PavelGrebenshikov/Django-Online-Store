@@ -3,8 +3,10 @@
         <div class="text__align-center">
             <span>Редактирование профиля</span>
         </div>
-        <a href="{% url 'user_edit_name' %}">Редактирование: Имени | Фамилии | Электронной почты</a><br>
-        <a href="{% url 'user_edit_profile' %}">Редактирование: Номера телефона | День Рождения</a>
+        <div style="width: 100%; text-align: center;">
+            <a href="{% url 'user_edit_name' %}">Редактирование: Имени | Фамилии | Электронной почты</a><br>
+            <a href="{% url 'user_edit_profile' %}">Редактирование: Номера телефона | День Рождения</a>
+        </div>
     </section>
 
 {% endblock content  %}

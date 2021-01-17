@@ -12,10 +12,11 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name_product', 'discription', 'price', 'category', 'create_at', 'update_at']
+    list_display = ['id', 'name_product', 'discription', 'price', 'category', 'create_at', 'update_at', 'visible_point']
     list_display_links = ['id', 'name_product']
-    search_fields = ['id', 'name_product', 'discription']
-    fields = ('name_product', 'discription', 'price', 'category', 'images', 'get_images')
+    search_fields = ['id', 'name_product', 'discription', 'visible_point']
+    fields = ('name_product', 'discription', 'price', 'category', 'images',
+              'get_images', 'visible_point')
     readonly_fields = ['create_at', 'update_at', 'get_images']
 
     def get_images(self, obj):

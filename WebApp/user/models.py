@@ -14,7 +14,8 @@ def update_profile(sender, instance, **kwargs):
 class Profile(models.Model):
     user = models.OneToOneField(User, default=None, null=True, on_delete=models.CASCADE)
     phone = PhoneField(blank=True, help_text='Контактный номер телефона', verbose_name='Номер телефона')
-    pictures = models.ImageField(verbose_name='Аватар', default=None, upload_to='images/users/%Y/%m/%d')
+    pictures = models.ImageField(verbose_name='Аватар', default='images/users/Standard/avatar.jpg',
+                                 upload_to='images/users/%Y/%m/%d')
     birth_date = models.DateField('Дата рождения', blank=True, default="1996-03-01", null=False)
     reg_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата регистрации')
 

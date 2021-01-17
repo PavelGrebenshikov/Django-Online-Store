@@ -30,6 +30,7 @@ class Product(models.Model):
     ToPut = models.BooleanField(default=True, verbose_name='Выставить на продажу')
     create_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
     update_at = models.DateTimeField(auto_now=True, verbose_name='дата обновления')
+    visible_point = models.BooleanField(default=True, verbose_name='Показ товара')
 
     def get_absolute_url(self):
         return reverse('profile_detail', kwargs={'pk': self.pk})

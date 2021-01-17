@@ -1,16 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 <section class="main">
   <div class="text__align-center">
-    <span>Register user</span>
+    <span>Регистрация</span>
   </div>
   <form method="POST">
     {% csrf_token %}
     <div class="help__form">
       <ul class="list">
-        <li>1. To register, enter your password and username.</li>
-        <li>2. Then click on the "Register" button.</li>
-        <li>3. If something went wrong. The fields will turn red.</li>
-        <li>4. If registration is successful, the fields will be green</li>
+        <li>1. Чтобы зарегистрироваться, введите свой пароль и имя пользователя.</li>
+        <li>2. Затем нажмите на кнопку "Зарегистрироваться".</li>
+        <li>3. Если регистрация прошла успешно, Вас перенаправят на другую страницу</li>
       </ul>
     </div>
     <div class="wrapper__form">

@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import request, HttpResponseRedirect
-from django.views.generic import ListView, CreateView
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.views.generic import ListView
 from .models import Profile
 from .forms import ProfileUserForm, UserNameEditFrom
 from django.contrib.auth.models import User

@@ -86,7 +86,7 @@ header {
 }
 .text__header-lower {
   position: relative;
-  right: 495px;
+  right: 1px;
   top: 5px;
 }
 .text__header-lower > span {

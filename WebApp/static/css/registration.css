@@ -6,6 +6,12 @@
   height: 612px;
 }
 
+.main_profile {
+  background-color: #222;
+  min-width: 100%;
+  height: 612px;
+}
+
 /* Text */
 
 .text__align-center {
@@ -23,7 +29,7 @@
 
 .help__form {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 410px;
+  width: 500px;
   height: 300px;
   color: #fff;
 }
@@ -59,11 +65,19 @@
 }
 
 /* Edit for one line later */
-form {
+#edit_profile {
+  display: -webkit-flex;
   display: flex;
-  justify-content: center;
+  width: 25%;
+  height: 312px;
+  background: #222;
+}
+
+form {
+  display: -webkit-flex;
+  display: flex;
   width: 100%;
-  height: 512px;
+  height: 312px;
   background: #222;
 }
 .invalid__password-user {
@@ -87,7 +101,7 @@ a:hover {
 }
 .wrapper__form {
   position: relative;
-  top: 50px;
+  top: 30px;
   width: 340px;
   height: 200px;
   color: #fff;

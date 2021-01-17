@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Product, Slider, Edit, EditCenterText, VariousDetails, Category
 # Create your views here.
 
@@ -17,7 +17,7 @@ class IndexView(ListView):
             'Sliders': Slider.objects.all(),
             'EditText': Edit.objects.all(),
             'EditHeadText': EditCenterText.objects.all(),
-            'VariousDetails': VariousDetails.objects.all(),
+            'VariousDetails': VariousDetails.objects.all()
         })
         return context
 
