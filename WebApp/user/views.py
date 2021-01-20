@@ -19,7 +19,8 @@ def edit_user_name(request):
 
 def edit_profile_user(request):
     if request.method == "POST":
-        form = ProfileUserForm(data=request.POST, instance=request.user)
+        user = request.user.profile
+        form = ProfileUserForm(data=request.POST, instance=user)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/accounts/profile/')
@@ -35,5 +36,5 @@ class EditProfile(ListView):
 
 def user(request):
     user = User.objects.get(id=request.user.id)
-    add_profile = Profile.objects.get(id=request.user.id)
+    add_profile = Profile.objects.get(id=request.user.profile.id)
     return render(request, 'user/user.html', {"user": user, "add_profile": add_profile})

@@ -4,9 +4,6 @@ from .models import Profile
 
 
 class ProfileUserForm(forms.ModelForm):
-    phone = forms.CharField(max_length=11, label='Телефон', widget=forms.TextInput())
-    birth_date = forms.CharField(max_length=None, label='Др', widget=forms.TextInput())
-
     class Meta:
         model = Profile
         fields = ['phone', 'birth_date']
