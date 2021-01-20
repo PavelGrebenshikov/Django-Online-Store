@@ -1,0 +1,41 @@
+  <header>
+      <div class="header-top">
+        <div class="header__logo">
+          <div class="logo">
+            <span class="text-logo">
+              Магазин Двоечка
+            </span>
+          </div>
+        </div>
+        <div class="header__menu-icons">
+          <div class="menu__icons">
+            <div class="links-icons">
+              <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-shopping-basket"></i></i></a>
+              <a href="#"
+                ><i class="fa fa-question-circle" aria-hidden="true"></i
+              ></a>
+              <a href="{% url 'login' %}"><i class="fa fa-user"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__lower">
+        <div class="header__bg">
+          <div class="text__header-lower">
+            <span>
+              Меню
+            </span>
+          </div>
+
+          <div class="header__navigation-menu">
+            <span><a href="{% url 'index' %}">Главная</a></span>
+            <span><a href="details.html">Детали</a></span>
+            <span><a href="#">Цены</a></span>
+            <span><a href="#">Поставщики</a></span>
+            <span><a href="{% url 'about' %}">О нас</a></span>
+          </div>
+        </div>
+      </div>
+    </header>

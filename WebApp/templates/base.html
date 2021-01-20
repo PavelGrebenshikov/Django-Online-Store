@@ -14,111 +14,19 @@
     <link rel="stylesheet" href="{% static "css/site.css" %}">
     <link rel="stylesheet" href="{% static "css/registration.css" %}">
     <script src="{% static "js/modernizr.custom.js" %}"></script>
-    <title>Магазин Двоечка</title>
-  </head>
-  <body>
-    <!-- header -->
-    <header>
-      <div class="header-top">
-        <div class="header__logo">
-          <div class="logo">
-            <span class="text-logo">
-              Магазин Двоечка
-            </span>
-          </div>
-        </div>
-        <div class="header__menu-icons">
-          <div class="menu__icons">
-            <div class="links-icons">
-              <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-shopping-basket"></i></i></a>
-              <a href="#"
-                ><i class="fa fa-question-circle" aria-hidden="true"></i
-              ></a>
-              <a href="{% url 'login' %}"><i class="fa fa-user"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__lower">
-        <div class="header__bg">
-          <div class="text__header-lower">
-            <span>
-              Меню
-            </span>
-          </div>
-
-          <div class="header__navigation-menu">
-            <span><a href="{% url 'index' %}">Главная</a></span>
-            <span><a href="details.html">Детали</a></span>
-            <span><a href="#">Цены</a></span>
-            <span><a href="#">Поставщики</a></span>
-            <span><a href="{% url 'about' %}">О нас</a></span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- block content -->
-
-        {% block content %}{% endblock content %}
-
-    <!-- end block content -->
-
-
-
-
-    <!-- Footer -->
-    <footer class="scroll__pointer3">
-      <div class="text__footer-center">
-        <span
-          >In case of copyright infringement, please contact
-          online-store@mail.oc</span
-        >
-      </div>
-      <div class="flex__column">
-        <div class="list__text-footer">
-          <ul class="list__footer">
-            <li><a href="#">Поддержка</a></li>
-            <li><a href="{% url "about" %}">О нас</a></li>
-            <li><a href="#">Информация о нашем магазине</a></li>
-            <li><a href="#">Основатель магазина</a></li>
-            <li><a href="#">Партнёры</a></li>
-          </ul>
-        </div>
-        <div class="list__text-footer">
-          <ul class="list__footer">
-            <li><a href="#">Лицензиии</a></li>
-            <li><a href="#">Создание данного сайта: 19.09.2020</a></li>
-            <li><a href="#">Для связи email: grom.gom@mail.ru</a></li>
-            <li><a href="#">This site was created by my imagination</a></li>
-            <li><a href="#">Джанго-фет</a></li>
-          </ul>
-        </div>
-        <div class="list__text-footer">
-          <ul class="list__footer">
-            <li><a href="#">These fields will be filled in with accurate information later</a></li>
-            <li><a href="#">All photos taken from the site pixabay.com</a></li>
-            <li><a href="#">I will develop an online store for my portfolio</a></li>
-            <li><a href="#">I created this site in one day</a></li>
-            <li><a href="#">Average difficulty level</a></li>
-          </ul>
-        </div>
-        <div class="list__text-footer">
-          <ul class="list__footer">
-            <li><a href="#">There will be feedback forms</a></li>
-            <li><a href="#">Different page</a></li>
-            <li><a href="#">Perhaps a personal account</a></li>
-            <li><a href="#">I will also make the admin panel</a></li>
-            <li><a href="#">The site will be automated</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <!-- JavaScript Links -->
     <script src="{% static "js/jquery-3.5.0.min.js" %}"></script>
     <script src="{% static "js/jquery.cbpFWSlider.min.js" %}"></script>
     <script src="{% static "js/script.js" %}"></script>
-  </body>
-</html>
+    <title>Магазин Двоечка</title>
+  </head>
+  <body>
+
+        {% include 'include/header.html' %}
+
+    <!-- block content -->
+
+        {% block content %}
+        {% endblock content %}
+
+    <!-- end block content -->
+        {% include 'include/footer.html' %}
