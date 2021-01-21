@@ -1,11 +1,16 @@
 {% extends 'base.html' %} {% block content %}
     <section class="main_profile">
         <div class="text__align-center">
-            <span>Редактирование профиля</span>
+            <span>Редактирование дополнительной информации</span>
         </div>
-        <div style="width: 100%; text-align: center;">
-            <a href="{% url 'user_edit_name' %}">Редактирование: Имени | Фамилии | Электронной почты</a><br>
-            <a href="{% url 'user_edit_profile' %}">Редактирование: Номера телефона | День Рождения</a>
-        </div>
+        <form method="POST" id="edit_profile">
+            <div class="wrapper__form">
+                {% csrf_token %}
+                {{ form.as_table }}
+                <input id="btn-submit" name="btn" type="submit" value="Изменить">
+                <input type="hidden" value="{{ next }}">
+            </div>
+          <div class="links__site"></div>
+        </form>
     </section>
 {% endblock content  %}

@@ -6,7 +6,7 @@ from .models import Profile
 class ProfileUserForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['phone', 'birth_date']
+        fields = ['username', 'surname', 'phone', 'birth_date', 'pictures']
 
 
 class UserNameEditFrom(forms.ModelForm):
