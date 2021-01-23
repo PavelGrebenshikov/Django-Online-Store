@@ -13,11 +13,11 @@ def update_profile(sender, instance, **kwargs):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    username = models.CharField(max_length=128, blank=False, default='', verbose_name='Имя пользователя')
-    surname = models.CharField(max_length=128, blank=False, default='', verbose_name='Фамилия пользователя')
+    username = models.CharField(max_length=128, blank=True, default='', verbose_name='Имя пользователя')
+    surname = models.CharField(max_length=128, blank=True, default='', verbose_name='Фамилия пользователя')
     phone = PhoneField(blank=True, help_text='Контактный номер телефона', verbose_name='Номер телефона')
     pictures = models.ImageField(verbose_name='Аватар', default='images/users/Standard/avatar.jpg',
-                                 upload_to='images/users/%Y/%m/%d')
+                                 upload_to='images/users/%Y/%m/%d', blank=True)
     birth_date = models.DateField('Дата рождения', blank=False, default="1996-03-01", null=False)
     reg_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата регистрации')
 

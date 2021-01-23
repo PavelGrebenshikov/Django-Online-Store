@@ -4,9 +4,9 @@ from .models import Profile
 
 
 class ProfileUserAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user', 'username', 'surname', 'phone', 'birth_date', 'reg_date']
+    list_display = ['id', 'user', 'username', 'surname', 'phone', 'birth_date', 'reg_date', 'pictures']
     list_display_links = ['id', 'user', 'username', 'surname', 'birth_date', 'reg_date']
-    search_fields = ['id', 'user', 'username', 'surname', 'birth_date', 'reg_date']
+    search_fields = ['id', 'user', 'username', 'surname', 'birth_date', 'reg_date', 'pictures']
 
 
 admin.site.register(Profile, ProfileUserAdmin)
