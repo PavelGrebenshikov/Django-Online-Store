@@ -119,6 +119,20 @@ a:hover {
   color: #fff;
   margin: 20px;
 }
+
+#edit__profile-form {
+   position: relative;
+   left: 200px;
+}
+
+/* edit profile */
+#edit__profile-form > input {
+  border-radius: 10px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+
 /* Btn submit */
 
 #btn-submit {
