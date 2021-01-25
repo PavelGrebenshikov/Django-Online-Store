@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
+{% extends 'base.html' %} {% block content %} {% load static %} {% load cache %}
+{% cache 300 information %}
 <section>
   <div class="container__store">
     {% for EditsHeadText in EditHeadText %}
@@ -7,7 +8,7 @@
       <h3>{{ EditsHeadText.EditHeadText }}</h3>
     </div>
     <div class="icons__details-nut">
-      <img src="../../static{{ EditsHeadText.EditCenterImage.url }}" />
+      <img src="{{ EditsHeadText.EditCenterImage.url }}" />
     </div>
     {% endfor %}
     <div class="wrapper__block-information">
@@ -20,14 +21,16 @@
           <span> {{ Edit.EditDisText }} </span>
         </div>
         <div class="details__car">
-          <img src="../../static{{Edit.EditImages.url }}" alt="Детали" />
+          <img src="{{ Edit.EditImages.url }}" alt="Детали" />
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
+{% endcache %}
 <!-- Section categories in online store -->
+{% cache 60 categories %}
 <section class="flex__container">
   <div class="container">
     <div class="category__section">
@@ -35,27 +38,27 @@
         <span class="list__category">Категории</span>
       </div>
       <div class="category">
-           {% for category in Category %}
+          {% for category in Category %}
         <div class="category_products">
           <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
         </div>
-      {% endfor %}
+          {% endfor %}
       </div>
     </div>
   </div>
+  {% endcache %}
   <div class="wrapper">
     <div class="flex__wrapper">
       {% for Product in Products %}
-      <div class="pictures__flex-blocks">
-        <div class="text__about-item">
-          <h1>{{ Product.name_product }}</h1>
-          <h2>{{ Product.discription }}</h2>
-          <h3>{{ Product.price }} руб</h3>
-          <a class="link__items" href="{{ Product.get_absolute_url }}">Подробнее</a>
-        </div>
-        <img class="active" src="/../../../static{{Product.images.url }}" alt="" />
-      </div>
-      
+          <div class="pictures__flex-blocks">
+            <div class="text__about-item">
+              <h1>{{ Product.name_product }}</h1>
+              <h2>{{ Product.discription }}</h2>
+              <h3>{{ Product.price }} руб</h3>
+              <a class="link__items" href="{{ Product.get_absolute_url }}">Подробнее</a>
+            </div>
+            <img class="active" src="{{ Product.images.url }}" alt="" />
+          </div>
       {% endfor %}
     </div>
     <div class="pagination">
@@ -77,11 +80,7 @@
     </div>
     <div class="list__menu-products">
       <div class="list__products-wrapper">
-        <span><a href="#">Новые</a></span>
-        <span><a href="#">Скидки</a></span>
-        <span><a href="#">Популярные</a></span>
-        <span><a href="#">Старые детали</a></span>
-        <span> <a href="#">Расходные материалы</a></span>
+        <span><a href="{% url 'index' %}">Мы рады Вас видеть в нашем магазине!</a></span>
       </div>
     </div>
   </div>
@@ -89,7 +88,7 @@
     <div id="cbp-fwslider" class="cbp-fwslider">
       <ul>
         {% for sl in Sliders %}
-        <li><img src="../../static{{sl.SliderImages.url }}" /></li>
+        <li><img src="{{ sl.SliderImages.url }}" /></li>
         {% endfor %}
       </ul>
     </div>
@@ -110,7 +109,7 @@
         {% for Various in VariousDetails %}
         <div class="pictures__product-lower">
           <img
-            src="../../static{{ Various.VariousImage.url }}"
+            src="{{ Various.VariousImage.url }}"
             alt="Various Products"
           />
         </div>

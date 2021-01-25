@@ -6,16 +6,15 @@
     <div class="main">
         <div class="details">
             {% for Product in Products %}
-                <img class="pictures_details" src="../../../static{{ Product.images.url }}" alt="pictures_detail">
+                <img class="pictures_details" src="{{ Product.images.url }}" alt="pictures_detail">
                 <h3 class="name_detail">{{ Product.name_product }}</h3>
                 <p class="discription_detail">{{ Product.discription }}</p>
                 <p class="price">{{ Product.price }}</p>
-                <button  class="add_in_basket"type="submit">Добавить в корзину</button>
+                <button  class="add_in_basket" type="submit">Добавить в корзину</button>
             {% endfor %}
         </div>
     </div>
 </section>
-
 
 
 
