@@ -9,7 +9,7 @@ class AboutCompany(models.Model):
         'Должность сотрудника', max_length=128, blank=False)
     discription = models.CharField(
         'Описание сотрудника', max_length=128, blank=False)
-    images = models.ImageField('Фотография сотрудника', upload_to='images/')
+    images = models.ImageField('Фотография сотрудника', upload_to='images/about/')
 
     def __str__(self):
         return self.position

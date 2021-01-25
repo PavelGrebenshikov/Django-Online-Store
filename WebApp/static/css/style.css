@@ -532,7 +532,7 @@ footer {
   color: #222;
 }
 .information__about-us {
-  margin: 150px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 24px;
@@ -540,7 +540,7 @@ footer {
   width: 800px;
   position: relative;
   top: 0;
-  left: 230px;
+  left: 300px;
 }
 .flex__people-authority {
   position: absolute;
