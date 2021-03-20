@@ -1,0 +1,9 @@
+<div class="container__slider">
+    <div id="cbp-fwslider" class="cbp-fwslider">
+      <ul>
+        {% for sl in Sliders %}
+        <li><img src="{{ sl.SliderImages.url }}" /></li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>

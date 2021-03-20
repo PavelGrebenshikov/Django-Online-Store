@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %} {% load static %} {% load cache %}
+{% extends 'base.html' %} {% block content %} {% load static %} {% load cache %} {% load main_tags %}
 {% cache 300 information %}
 <section>
   <div class="container__store">
@@ -31,21 +31,7 @@
 {% endcache %}
 <!-- Section categories in online store -->
 {% cache 60 categories %}
-<section class="flex__container">
-  <div class="container">
-    <div class="category__section">
-      <div class="section-list">
-        <span class="list__category">Категории</span>
-      </div>
-      <div class="category">
-          {% for category in Category %}
-        <div class="category_products">
-          <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
-        </div>
-          {% endfor %}
-      </div>
-    </div>
-  </div>
+  {% show_category %}
   {% endcache %}
   <div class="wrapper">
     <div class="flex__wrapper">
@@ -84,15 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="container__slider">
-    <div id="cbp-fwslider" class="cbp-fwslider">
-      <ul>
-        {% for sl in Sliders %}
-        <li><img src="{{ sl.SliderImages.url }}" /></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+  {% show_sliders %}
 </section>
 <!-- Section line -->
 <section class="line__section">
@@ -100,22 +78,6 @@
 </section>
 <!-- Section lower main content -->
 <section class="scroll__pointer2">
-  <div class="container__last-lower">
-    <div class="section__lower-content">
-      <div class="header__text-content">
-        <span>Различные детали</span>
-      </div>
-      <div class="flex__pictures-colum">
-        {% for Various in VariousDetails %}
-        <div class="pictures__product-lower">
-          <img
-            src="{{ Various.VariousImage.url }}"
-            alt="Various Products"
-          />
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
+  {% show_various_details %}
 </section>
 {% endblock content %}

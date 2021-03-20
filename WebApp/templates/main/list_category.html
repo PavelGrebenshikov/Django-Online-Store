@@ -1,0 +1,15 @@
+<section class="flex__container">
+   <div class="container">
+   <div class="category__section">
+      <div class="section-list">
+        <span class="list__category">Категории</span>
+      </div>
+      <div class="category">
+           {% for category in Category %}
+        <div class="category_products">
+        <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+        </div>
+            {% endfor %}
+    </div>
+    </div>
+</div>

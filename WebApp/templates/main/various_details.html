@@ -1,0 +1,17 @@
+<div class="container__last-lower">
+    <div class="section__lower-content">
+      <div class="header__text-content">
+        <span>Различные детали</span>
+      </div>
+      <div class="flex__pictures-colum">
+        {% for Various in VariousDetails %}
+        <div class="pictures__product-lower">
+          <img
+            src="{{ Various.VariousImage.url }}"
+            alt="Various Products"
+          />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
