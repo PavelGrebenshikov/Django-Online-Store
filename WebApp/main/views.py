@@ -19,7 +19,8 @@ class IndexView(ListView):
         return context
 
     def get_queryset(self):
-        return Product.objects.filter(ToPut=True).select_related('category')
+        return Product.objects.filter(ToPut=True).only('name_product', 'id', 'category_id', 'discription', 'price',
+         'images').select_related('category')
 
 
 class ProductDetailView(ListView):
@@ -30,7 +31,8 @@ class ProductDetailView(ListView):
     paginate_by = 6
 
     def get_queryset(self):
-        return Product.objects.filter(category__slug=self.kwargs.get('slug')).select_related('category')
+        return Product.objects.filter(category__slug=self.kwargs.get('slug')).only('name_product', 'id', 'category_id', 'discription', 'price',
+         'images').select_related('category')
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ProductDetailView, self).get_context_data(**kwargs)
